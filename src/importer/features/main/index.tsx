@@ -44,6 +44,10 @@ export default function Main(props: CSVImporterProps) {
   const [initializationError, setInitializationError] = useState<string | null>(null);
   const [dataError, setDataError] = useState<string | null>(null);
 
+  const papaParseConfig = {
+    preview: 15,
+  }
+
   // File data
   const emptyData = {
     fileName: "",
@@ -147,6 +151,7 @@ export default function Main(props: CSVImporterProps) {
                         });
                         goNext();
                       },
+                    ...papaParseConfig,
                     });
                     break;
                   case "xlsx":
