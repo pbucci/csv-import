@@ -37,6 +37,7 @@ function App() {
         template={template}
         modalOnCloseTriggered={() => setIsOpen(false)}
         modalCloseOnOutsideClick={true}
+        papaParseConfig={{preview: 10}}
       />
     </div>
   );

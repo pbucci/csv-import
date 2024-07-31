@@ -8,6 +8,8 @@ type ModalParams = {
   modalCloseOnOutsideClick?: boolean;
 };
 
+import type { ParseConfig } from "papaparse";
+
 export type CSVImporterProps = (HTMLAttributes<HTMLDialogElement> & HTMLAttributes<HTMLDivElement>) & {
   template?: Record<string, unknown> | string;
   darkMode?: boolean;
@@ -20,4 +22,5 @@ export type CSVImporterProps = (HTMLAttributes<HTMLDialogElement> & HTMLAttribut
   skipHeaderRowSelection?: boolean;
   language?: string;
   customTranslations?: Resource;
+  papaParseConfig?: ParseConfig
 } & ModalParams;
